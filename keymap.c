@@ -414,6 +414,14 @@ void shutdown_user(void) {
 #endif // RGB_MATRIX_ENABLE
 }
 
+const key_override_t backslash_key_override =
+    ko_make_with_layers_and_negmods(0,             // Trigger modifiers
+                                    KC_BACKSLASH,  // Trigger key
+                                    KC_SLASH,      // Replacement key
+                                    ~0,            // Activate on layer
+                                    MOD_MASK_SHIFT // Do not activate when mods are pressed
+    );
+
 const key_override_t questionmark_key_override =
     ko_make_with_layers_and_negmods(0,             // Trigger modifiers
                                     KC_SLASH,      // Trigger key
@@ -425,10 +433,11 @@ const key_override_t questionmark_key_override =
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
     &questionmark_key_override,
+    &backslash_key_override,
     &ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL),
     &ko_make_basic(MOD_MASK_SHIFT, KC_DOT, S(KC_SEMICOLON)),
     &ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, KC_SEMICOLON),
-    &ko_make_basic(MOD_MASK_SHIFT, KC_BACKSLASH, KC_SLASH),
+    &ko_make_basic(MOD_MASK_SHIFT, KC_BACKSLASH, KC_BACKSLASH),
     &ko_make_basic(MOD_MASK_SHIFT, KC_SLASH, S(KC_1)),
     NULL // Null terminate the array of overrides!
 };
