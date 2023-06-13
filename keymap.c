@@ -93,38 +93,19 @@ const uint16_t mapped_keys[][2] = {
     [MAPPED_ZOOM_OUT - START_OF_MAPPED_KEYCODES]         = {G(KC_MINS), C(KC_MINS)},
     [MAPPED_ZOOM_RESET - START_OF_MAPPED_KEYCODES]       = {G(KC_0), C(KC_0)},
     [MAPPED_LOCK_DESKTOP - START_OF_MAPPED_KEYCODES]     = {G(C(KC_Q)), G(S(KC_Q))}
-    // [SK_KILL - SK_KILL]    = {G(A(KC_ESC)), C(A(KC_DEL))},       // "KILL" OR Force quit /
-    // ctrl-alt-del [SK_HENK - SK_KILL]    = {KC_INT4, KC_INT4},                 // 変換 [SK_MHEN -
-    // SK_KILL]    = {KC_INT5, KC_INT5},                 // 無変換 [SK_HENT - SK_KILL]    =
-    // {G(KC_ENT), C(KC_ENT)},             // Hard ENTER [SK_PSTM - SK_KILL]    = {G(S(A(KC_V))),
-    // C(S(A(KC_V)))},     // paste_match [SK_SALL - SK_KILL]    = {G(KC_A), C(KC_A)}, // select all
-    // [SK_CLOZ - SK_KILL]    = {G(KC_W), C(KC_W)},                 // close
-    // [SK_QUIT - SK_KILL]    = {G(KC_Q), C(KC_Q)},                 // quit
-    // [SK_NEW - SK_KILL]     = {G(KC_N), C(KC_N)},                 // new
-    // [SK_OPEN - SK_KILL]    = {G(KC_O), C(KC_O)},                 // open
-    // [SK_FIND - SK_KILL]    = {G(KC_F), C(KC_F)},                 // find
-    // [SK_FAGN - SK_KILL]    = {G(KC_G), KC_F3},                   // find again
-    // [SK_SCAP - SK_KILL]    = {S(G(KC_4)), KC_PSCR},              // Screen Capture
-    // [SK_SCLP - SK_KILL]    = {C(S(G(KC_4))), A(KC_PSCR)},        // Selection Capture))
-    // [SK_DOCBEG - SK_KILL]  = {G(KC_UP), C(KC_HOME)},             // Go to start of document
-    // [SK_DOCEND - SK_KILL]  = {G(KC_DOWN), C(KC_END)},            // Go to end of document
-    // [SK_LINEBEG - SK_KILL] = {G(KC_DOWN), C(KC_END)},            // Go to beg of line
-    // [SK_LINEEND - SK_KILL] = {G(KC_DOWN), C(KC_END)},            // Go to end of line
-    // [SK_PARAPRV - SK_KILL] = {A(KC_UP), C(KC_UP)},               // Go to previous paragraph
-    // [SK_PARANXT - SK_KILL] = {A(KC_DOWN), C(KC_DOWN)},           // Go to next paragraph
-    // [SK_HISTPRV - SK_KILL] = {G(KC_LBRC), A(KC_LEFT)},           // BROWSER BACK
-    // [SK_HISTNXT - SK_KILL] = {G(KC_RBRC), A(KC_RIGHT)},          // BROWSER FWD
-    // [SK_APPNXT - SK_KILL]  = {RGUI(KC_TAB), A(KC_TAB)},          // APP switcher Next (last used)
-    // [SK_APPPRV - SK_KILL]  = {RGUI(RSFT(KC_TAB)), A(S(KC_TAB))}, // APP switcher Prev (least
-    // recently used) [SK_WINNXT - SK_KILL]  = {RCTL(KC_TAB), C(KC_TAB)},          // Window/tab
-    // switcher Next [SK_WINPRV - SK_KILL]  = {RCTL(RSFT(KC_TAB)), C(S(KC_TAB))}, // Window/tab
-    // switcher Prev [SK_SECT - SK_KILL]    = {A(KC_5), 0xE167},                  // § ** SAMPLE OF
-    // GLYPH. REALLY NEED UNICODE. [SK_ENYE - SK_KILL]    = {A(KC_N), A(KC_N)},                 //
-    // ñ/Ñ ** SAMPLE OF GLYPH. REALLY NEED UNICODE? [SK_SQUL - SK_KILL]    = {A(KC_RBRC),
-    // A(KC_RBRC)},           // ’ ** Left single quote UNICODE? [SK_SQUR - SK_KILL]    =
-    // {S(A(KC_RBRC)), S(A(KC_RBRC))},     // ’ ** Right single quote UNICODE? [SK_SDQL - SK_KILL]
-    // = {A(KC_LBRC), A(KC_LBRC)},           // ’ ** Left double quote UNICODE? [SK_SDQR - SK_KILL]
-    // = {A(S(KC_LBRC)), A(S(KC_LBRC))},     // ’ ** Right double quote UNICODE?
+    // [MAPPED_OPEN - START_OF_MAPPED_KEYCODES]    = {G(KC_O), C(KC_O)},
+    // [MAPPED_FIND_AGAIN - START_OF_MAPPED_KEYCODES]    = {G(KC_G), KC_F3},
+    // [MAPPED_SCREEN_CAPTURE - START_OF_MAPPED_KEYCODES]    = {S(G(KC_4)), KC_PSCR},
+    // [MAPPED_DOC_START - START_OF_MAPPED_KEYCODES]  = {G(KC_UP), C(KC_HOME)},
+    // [MAPPED_DOC_END - START_OF_MAPPED_KEYCODES]  = {G(KC_DOWN), C(KC_END)},
+    // [MAPPED_LINE_BEG - START_OF_MAPPED_KEYCODES] = {G(KC_DOWN), C(KC_END)},
+    // [MAPPED_LINE_END - START_OF_MAPPED_KEYCODES] = {G(KC_DOWN), C(KC_END)},
+    // [MAPPED_PARAGRAPH_PREV - START_OF_MAPPED_KEYCODES] = {A(KC_UP), C(KC_UP)},
+    // [MAPPED_PARAGRAPH_NEXT - START_OF_MAPPED_KEYCODES] = {A(KC_DOWN), C(KC_DOWN)},
+    // [MAPPED_APP_NEXT - START_OF_MAPPED_KEYCODES]  = {RGUI(KC_TAB), A(KC_TAB)},
+    // [MAPPED_APP_PREV - START_OF_MAPPED_KEYCODES]  = {RGUI(RSFT(KC_TAB)), A(S(KC_TAB))},
+    // [MAPPED_WIN_NEXT - START_OF_MAPPED_KEYCODES]  = {RCTL(KC_TAB), C(KC_TAB)},
+    // [MAPPED_WIN_PREV - START_OF_MAPPED_KEYCODES]  = {RCTL(RSFT(KC_TAB)), C(S(KC_TAB))},
 
 };
 
