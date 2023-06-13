@@ -24,7 +24,7 @@
 
 #ifdef VIA_ENABLE
 /* VIA configuration. */
-#    define DYNAMIC_KEYMAP_LAYER_COUNT 8
+#    define DYNAMIC_KEYMAP_LAYER_COUNT 16
 #endif // VIA_ENABLE
 
 /* Charybdis-specific features. */
@@ -40,4 +40,4 @@
 
 // ONE SHOT KEYS
 #define ONESHOT_TAP_TOGGLE 2
-#define ONESHOT_TIMEOUT 300
+#define ONESHOT_TIMEOUT 500
