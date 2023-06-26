@@ -358,8 +358,8 @@ void shutdown_user(void) {
 
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
-    &ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL),
     &ko_make_basic(MOD_MASK_SHIFT, KC_DOT, S(KC_SEMICOLON)),
     &ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, KC_SEMICOLON),
+    &ko_make_basic(MOD_MASK_SHIFT, KC_SLASH, KC_BACKSLASH),
     NULL // Null terminate the array of overrides!
 };
